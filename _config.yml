@@ -1,0 +1,6 @@
+title: "Alberto's Portfolio"
+email: "tuemail@example.com"
+description: "ABAP Developer & Full Stack Programmer"
+baseurl: "" # Ajustar si tu página no es la raíz del sitio.
+url: "https://your-portfolio.github.io" # Cambia por tu URL
+theme: jekyll-theme-minimal # Puedes cambiarlo luego por uno personalizado
