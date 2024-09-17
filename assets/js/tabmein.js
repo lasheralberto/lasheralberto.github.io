@@ -26,3 +26,29 @@ window.addEventListener('scroll', () => {
         main.classList.add('visible');
     }
 });
+
+// Tab functionality for showing sections
+const homeLink = document.getElementById('home-link');
+const projectsLink = document.getElementById('projects-link');
+const contactLink = document.getElementById('contact-link');
+
+const homeSection = document.getElementById('home-section');
+const projectsSection = document.getElementById('projects-section');
+const contactSection = document.getElementById('contact-section');
+
+// Function to switch between sections
+function showSection(section) {
+    homeSection.style.display = 'none';
+    projectsSection.style.display = 'none';
+    contactSection.style.display = 'none';
+
+    section.style.display = 'block';
+}
+
+// Event listeners for navigation
+homeLink.addEventListener('click', () => showSection(homeSection));
+projectsLink.addEventListener('click', () => showSection(projectsSection));
+contactLink.addEventListener('click', () => showSection(contactSection));
+
+// Default to showing the home section initially
+showSection(homeSection);

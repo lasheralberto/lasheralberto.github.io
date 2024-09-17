@@ -45,6 +45,11 @@ nav a:hover {
     display: none;
 }
 
+.section-content {
+    margin-top: 80px;
+    padding: 20px;
+}
+
 /* Mobile menu button for smaller screens */
 @media (max-width: 768px) {
     .menu-btn {
@@ -72,8 +77,6 @@ nav a:hover {
 }
 
 main {
-    margin-top: 80px;
-    padding: 20px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;

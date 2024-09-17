@@ -12,9 +12,9 @@
     <header>
         <h1>{{ site.title }}</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/contact">Contact</a>
+            <a href="#home" id="home-link">Home</a>
+            <a href="#projects" id="projects-link">Projects</a>
+            <a href="#contact" id="contact-link">Contact</a>
         </nav>
         <div class="menu-btn">
             <i class="fas fa-bars"></i>
@@ -22,15 +22,30 @@
     </header>
 
     <main>
-        {{ content }}
+        <!-- Home Section -->
+        <section id="home-section" class="section-content">
+            <h2>Welcome to the Home Page</h2>
+            <p>This is the home content.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects-section" class="section-content" style="display:none;">
+            <h2>My Projects</h2>
+            <p>Here are some of my projects.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="section-content" style="display:none;">
+            <h2>Contact Me</h2>
+            <p>You can contact me via email or phone.</p>
+        </section>
     </main>
 
     <footer>
         <p>© 2024 {{ site.title }}</p>
     </footer>
 
-    <!-- JavaScript for dynamic behavior -->
+    <!-- JavaScript for dynamic content -->
     <script src="{{ '/assets/js/tabmein.js' }}"></script>
 </body>
 </html>
-
