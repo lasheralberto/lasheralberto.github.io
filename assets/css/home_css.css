@@ -1,0 +1,93 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1e90ff;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Mobile menu button for smaller screens */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 24px;
+        color: white;
+    }
+
+    nav {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+    }
+
+    nav.open {
+        display: flex;
+    }
+}
+
+main {
+    margin-top: 80px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+main.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
